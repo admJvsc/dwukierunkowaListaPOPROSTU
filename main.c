@@ -37,6 +37,21 @@ int main(void) {
             printf("Gestosc: "); scanf("%lf", &m->gestosc);
             printf("Flaga: "); scanf(" %c", &m->flaga);
             push(&list, m);
+        } else if (wybor == 2) {
+            pop(&list);
+            printf("Usunieto ostatni element.\n");
+        } else if (wybor == 3) {
+            int index;
+            Material* m = malloc(sizeof(Material));
+            printf("Nazwa: "); scanf("%s", m->nazwa);
+            printf("Gestosc: "); scanf("%lf", &m->gestosc);
+            printf("Flaga: "); scanf(" %c", &m->flaga);
+            printf("Index: "); scanf("%d", &index);
+            pushAt(&list, m, index);
+        } else if (wybor == 4) {
+            int index;
+            printf("Index: "); scanf("%d", &index);
+            popAt(&list, index);
         } else if (wybor == 5) {
             PrintList(list, stdout);
         } else if (wybor == 6) {

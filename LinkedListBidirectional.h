@@ -10,7 +10,7 @@ Node* push(Node** head, Material* m);
 Node* pop(Node** head);
 Node* popAt(Node** head, int index);
 Node* pushAt(Node** head, Material* m, int  index);
-Node* GetElementAt(Node** head, int index);
+Node* getElementAt(Node* head, int index);
 
 void freeList(Node* head);
 
